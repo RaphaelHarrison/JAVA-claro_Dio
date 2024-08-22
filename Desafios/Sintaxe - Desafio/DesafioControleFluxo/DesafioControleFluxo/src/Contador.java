@@ -2,13 +2,13 @@ import java.util.Scanner;
 
 public class Contador {
     public static void main(String[] args) {
-        Scanner terminal = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         System.out.println("Digite o primeiro parâmetro:");
-        int parametroUm = terminal.nextInt();
+        int parametroUm = sc.nextInt();
 
         System.out.println("Digite o segundo parâmetro:");
-        int parametroDos = terminal.nextInt();
+        int parametroDos = sc.nextInt();
 
         try {
  
@@ -17,7 +17,7 @@ public class Contador {
         } catch (ParametrosInvalidosException e) {
             System.out.println(e.getMessage());
         }
-        terminal.close();
+        sc.close();
     }
 
     static void contar(int parametroUm, int parametroDois) throws ParametrosInvalidosException {
